@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+ <div class="container">
+
+ </div>
+ <biv>
+   <p id="a">test</p>
+   <form>
+     <input type="text" id="sa">
+     <button class="b">aaaa</button>
+   </form>
+
+   <input type="text" id="number1">+
+   <input type="text" id="number2">＝
+
+   <span id="answer">
+
+   </span>
+
+
+   <button id="sum">計算</button>
+
+ </biv>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script>
+ jQuery(document).ready(function () {
+
+  $("#a").append('<a href="http://http://tokidoki-web.com">ときどきweb</a>');
+　　$("#a").click(
+  function(){
+    alert($(this).text());
+  }
+);
+$(".b").click(function(){
+    var a = $("#sa").val();
+    $("#a").text(a)
+    return false
+  });
+  $("#sum").click(function(){
+    var number1=$("#number1").val();
+    var number2=$("#number2").val();
+    var sum=parseInt(number1)+parseInt(number2)
+    $("#answer").text(sum)
+  })
+});
+ </script>
+</body>
+</html>
